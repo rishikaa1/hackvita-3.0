@@ -3,7 +3,6 @@ import numpy as np
 import tensorflow as tf
 import segmentation_models as sm
 
-# Register custom objects for serialization
 @tf.keras.utils.register_keras_serializable()
 def dice_coef(y_true, y_pred, smooth=1):
     """Dice coefficient metric."""
