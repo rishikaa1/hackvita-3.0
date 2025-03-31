@@ -57,7 +57,7 @@ Current technologies like Google Maps depend on manual labour to annotate and ma
   - **Metrics**: Dice coefficient, IoU score.
  
 - **U-Net Archiecture**:
--![Loss-plot](static/Images/u-net-architecture.png)
+![Loss-plot](static/Images/u-net-architecture.png)
 
 **Source**: 
 - **U-Net: Convolutional Networks for Biomedical Image Segmentation**
@@ -68,13 +68,12 @@ Current technologies like Google Maps depend on manual labour to annotate and ma
   
 
 ### Training and Evaluation
-- **Common for both architectures**:
-  - **Dataset Split**: 90% training, 10% validation (via `train_test_split`).
-  - **Batching**: Batch size of 4.
-  - **Epochs**: 15
-  - **Metrics**: Dice coefficient, IoU score, Dice loss.
+- **Dataset Split**: 90% training, 10% validation (via `train_test_split`).
+- **Batching**: Batch size of 4.
+- **Epochs**: 15
+- **Metrics**: Dice coefficient, IoU score, Dice loss.
 
-### U-NET                      
+### U-NET Performance                     
   ![Loss-plot](static/Images/UNET_loss.png)
   
 ### References
