@@ -11,7 +11,7 @@ Input                      |  Output
 
 Current technologies like Google Maps depend on manual labor to annotate and maintain their maps. Our project seeks to streamline this process by automating road detection in such maps, which demand regular updates and verification.
 
-### [Demo](https://github.com/rishikaa1/hackvita-3.0/blob/main/static/demo.mp4)
+### [Demo](static/demo.gif)
 
 ## Contents
 
