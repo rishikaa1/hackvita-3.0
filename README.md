@@ -74,9 +74,9 @@ Current technologies like Google Maps depend on manual labor to annotate and mai
   - **Epochs**: 15(UNET), 8(DeepLabV3+)
   - **Metrics**: Dice coefficient, IoU score, Dice loss.
 
-### UNET                      
+### U-NET                      
   ![Loss-plot](static/Images/UNET_loss.png)
  
-- **DeepLabV3+**:
+### DeepLabV3+
   
  ...
