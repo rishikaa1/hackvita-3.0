@@ -57,7 +57,13 @@ Current technologies like Google Maps depend on manual labour to annotate and ma
   - **Metrics**: Dice coefficient, IoU score.
  
 - **U-Net Archiecture**:
--![Loss-plot](static/Images/UNET_loss.png)
+-![Loss-plot](static/Images/u-net-architecture.png)
+
+**Source**: 
+- **U-Net: Convolutional Networks for Biomedical Image Segmentation**
+- **Authors:** Olaf Ronneberger, Philipp Fischer, Thomas Brox
+- **Publication:** Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2015
+- **Paper**: [arXiv:1505.04597](https://arxiv.org/abs/1505.04597)
  
   
 
