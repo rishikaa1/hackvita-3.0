@@ -7,7 +7,7 @@ Input                      |  Output
 
 
 ## Description
-**RoadCraft** is a web-based application for segmentation of roads from aerial images using two deep learning models: U-Net and DeepLabV3+. Built with FastAPI and a responsive Bootstrap front-end, it allows users to upload images, select a model (U-Net or DeepLabV3+) via a dropdown, and visualize road annotations in real-time. The project leverages the Massachusetts Roads Dataset and integrates advanced segmentation techniques for urban planning, mapping, and emergency response applications.A lot of research has happened related to road information extraction from aerial imagery. Still it remains a challenging task due to noise, complex Image background and occlusions.
+**RoadCraft** is a web-based application for segmentation of roads from aerial images using two deep learning models: U-Net and DeepLabV3+. Built with FastAPI and a responsive Bootstrap front-end, it allows users to upload images and visualize road annotations in real-time. The project leverages the Massachusetts Roads Dataset and integrates advanced segmentation techniques for urban planning, mapping, and emergency response applications.A lot of research has happened related to road information extraction from aerial imagery. Still it remains a challenging task due to noise, complex Image background and occlusions.
 
 Current technologies like Google Maps depend on manual labor to annotate and maintain their maps. Our project seeks to streamline this process by automating road detection in such maps, which demand regular updates and verification.
 
@@ -57,26 +57,20 @@ Current technologies like Google Maps depend on manual labor to annotate and mai
   - **Backbone**: Likely EfficientNet (from `segmentation-models`), pre-trained on ImageNet.
   - **Metrics**: Dice coefficient, IoU score, Dice loss.
 
-- **DeepLabV3+**:
-  - **Type**: Encoder-decoder with Atrous Spatial Pyramid Pooling (ASPP).
-  - **Backbone**: MobileNetV2, pre-trained on ImageNet.
-  - **Components**:
-    - ASPP with dilation rates [1, 6, 12, 18] for multi-scale feature extraction.
-    - Decoder with upsampling and concatenation of low-level features.
-  - **Input**: 512x512x3 RGB images.
-  - **Output**: 512x512x1 binary mask (sigmoid activation).
-  - **Metrics**: Dice coefficient, IoU score, Dice loss.
-
 ### Training and Evaluation
 - **Common for both architectures**:
   - **Dataset Split**: 90% training, 10% validation (via `train_test_split`).
   - **Batching**: Batch size of 4.
-  - **Epochs**: 15(UNET), 8(DeepLabV3+)
+  - **Epochs**: 15(UNET)
   - **Metrics**: Dice coefficient, IoU score, Dice loss.
 
 ### U-NET                      
   ![Loss-plot](static/Images/UNET_loss.png)
- 
-### DeepLabV3+
   
- ...
+### References
+* **U-Net: Convolutional Networks for Biomedical Image Segmentation** - Olaf Ronneberger, Philipp Fischer, Thomas Brox (2015) - [https://arxiv.org/abs/1505.04597](https://arxiv.org/abs/1505.04597)
+* **Road Segmentation in Aerial Images by Exploiting Road Vector Data** - Jiangye Yuan, Anil M. Cheriyadat (2013) - [http://jiangyeyuan.com/papers/YC13_ComGeo.pdf](http://jiangyeyuan.com/papers/YC13_ComGeo.pdf)
+* **Road Segmentation in SAR Satellite Images with Deep Fully-Convolutional Neural Networks** - Corentin Henry, Seyed Majid Azimi, Nina Merkle (2018) - [https://www.researchgate.net/publication/386976934_Road_Segmentation_in_SAR_Satellite_Images_with_Deep_Fully-Convolutional_Neural_Networks](https://www.researchgate.net/publication/386976934_Road_Segmentation_in_SAR_Satellite_Images_with_Deep_Fully-Convolutional_Neural_Networks)
+* **Tensorflow** - [https://www.tensorflow.org/](https://www.tensorflow.org/)
+* **Albumentations** - [https://github.com/albumentations-team/albumentations](https://github.com/albumentations-team/albumentations)
+* **Segmentation Models** - [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
