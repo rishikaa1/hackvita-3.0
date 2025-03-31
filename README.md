@@ -10,6 +10,9 @@ Input                      |  Output
 **RoadCraft** is a web-based application for segmentation of roads from aerial images using two deep learning models: U-Net and DeepLabV3+. Built with FastAPI and a responsive Bootstrap front-end, it allows users to upload images, select a model (U-Net or DeepLabV3+) via a dropdown, and visualize road annotations in real-time. The project leverages the Massachusetts Roads Dataset and integrates advanced segmentation techniques for urban planning, mapping, and emergency response applications.A lot of research has happened related to road information extraction from aerial imagery. Still it remains a challenging task due to noise, complex Image background and occlusions.
 
 Current technologies like Google Maps depend on manual labor to annotate and maintain their maps. Our project seeks to streamline this process by automating road detection in such maps, which demand regular updates and verification.
+### Demo
+Watch RoadCraft simulating aerial images and annotating in real-time.
+static/demo.mp4
 
 ## Contents
 
