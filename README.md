@@ -53,7 +53,13 @@ Current technologies like Google Maps depend on manual labour to annotate and ma
   - **Input**: 512x512x3 RGB images.
   - **Output**: 512x512x1 binary mask (sigmoid activation).
   - **Backbone**: Likely EfficientNet (from `segmentation-models`), pre-trained on ImageNet.
-  - **Metrics**: Dice coefficient, IoU score, Dice loss.
+  - **Loss Function**: Dice loss.
+  - **Metrics**: Dice coefficient, IoU score.
+ 
+- **U-Net Archiecture**:
+-![Loss-plot](static/Images/UNET_loss.png)
+ 
+  
 
 ### Training and Evaluation
 - **Common for both architectures**:
