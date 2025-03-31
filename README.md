@@ -22,7 +22,7 @@ Current technologies like Google Maps depend on manual labour to annotate and ma
 - **Structure**: 
   - Training images: Aerial RGB images (e.g., `tiff/train/`).
   - Training masks: Binary road masks (e.g., `tiff/train_labels/`).
-- **Size**: Approximately 1,170 image-mask pairs of size 1500x1500.
+- **Size**: 1,171 image-mask pairs of size 1500x1500.
 - **Resolution**: Original images resized to 512x512 for training and inference.
 
 ### Tools and Libraries
