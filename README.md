@@ -7,7 +7,7 @@ Input                      |  Output
 
 
 ## Description
-**RoadCraft** is a web-based application for segmentation of roads from aerial images using two deep learning models: U-Net and DeepLabV3+. Built with FastAPI and a responsive Bootstrap front-end, it allows users to upload images and visualize road annotations in real-time. The project leverages the Massachusetts Roads Dataset and integrates advanced segmentation techniques for urban planning, mapping, and emergency response applications.A lot of research has happened related to road information extraction from aerial imagery. Still it remains a challenging task due to noise, complex Image background and occlusions.
+**RoadCraft** is a web-based application for segmentation of roads from aerial images using the encoder-decoder based deep learning model **U-Net**. Built with FastAPI and a responsive Bootstrap front-end, it allows users to upload images and visualize road annotations in real-time. The project leverages the Massachusetts Roads Dataset and integrates advanced segmentation techniques for urban planning, mapping, and emergency response applications.A lot of research has happened related to road information extraction from aerial imagery. Still it remains a challenging task due to noise, complex Image background and occlusions.
 
 Current technologies like Google Maps depend on manual labor to annotate and maintain their maps. Our project seeks to streamline this process by automating road detection in such maps, which demand regular updates and verification.
 
@@ -39,15 +39,11 @@ Current technologies like Google Maps depend on manual labor to annotate and mai
 - **Full List**: See `requirements.txt`.
 
 ### Data Preprocessing
-- **Common Steps**:
   - **Loading**: Images and masks loaded with OpenCV (`cv.imread`).
   - **Resizing**: Resized to 512x512 using `cv.resize` (INTER_CUBIC for images, INTER_NEAREST for masks).
   - **Mask Conversion**: Binary masks (0 or 255) via thresholding (U-Net: `pred > 0.5`, DeepLab: `mask >= 100`).
-- **U-Net Specific**:
-  - Normalization: Images scaled to [0, 1] (`img.astype(np.float32) / 255.0`).
-- **DeepLabV3+ Specific**:
-  - Normalization: MobileNetV2 preprocessing (`tf.keras.applications.mobilenet_v2.preprocess_input`), scales to [-1, 1].
-  - Augmentation: Horizontal flip (p=0.5), blur (p=0.85, limit=5) via Albumentations.
+  - **Normalization**: Images scaled to [0, 1] (`img.astype(np.float32) / 255.0`).
+
 
 ### Model Architecture
 - **U-Net**:
@@ -61,7 +57,7 @@ Current technologies like Google Maps depend on manual labor to annotate and mai
 - **Common for both architectures**:
   - **Dataset Split**: 90% training, 10% validation (via `train_test_split`).
   - **Batching**: Batch size of 4.
-  - **Epochs**: 15(UNET)
+  - **Epochs**: 15
   - **Metrics**: Dice coefficient, IoU score, Dice loss.
 
 ### U-NET                      
