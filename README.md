@@ -11,7 +11,7 @@ Input                      |  Output
 Accurate and efficient road detection from aerial imagery remains a critical challenge in urban planning, disaster response, and autonomous navigation. Traditional methods often rely on manual annotation or computationally expensive techniques, limiting scalability and real-time applicability. As a team, we voluntarily selected this problem to develop such an user-friendly automated platform which can annotate in real-time.  <br>
 So we developed **RoadCraft**,  which is a web-based application for segmentation of roads from aerial images using the encoder-decoder based deep learning model `U-Net`. Built with `FastAPI` and a responsive Bootstrap front-end, it allows users to upload images and visualize road annotations in real-time. The project leverages the 'Massachusetts Roads Dataset' and integrates advanced segmentation techniques for aforementioned real-world applications. A lot of research has happened in relation to road information extraction from aerial imagery. Still it remains a challenging task due to noise, complex Image background and occlusions.
 <br>
-Current technologies like Google Maps depend on manual labor to annotate and maintain their maps. Our project seeks to streamline this process by automating road detection in such maps, which demand regular updates and verification.
+Current technologies like Google Maps depend on manual labour to annotate and maintain their maps. Our project seeks to streamline this process by automating road detection in such maps, which demand regular updates and verification.
 
 ### [Demo](static/demo2.gif)
 
