@@ -1,9 +1,10 @@
 # Project Title: RoadCraft
+![Front-End Screenshot](static/Images/frontendss.png)  
 
 Input                      |  Output
 :-------------------------:|:-------------------------:
 ![](static/Images/input.png)    |  ![](static/Images/output.png) 
-![Front-End Screenshot](static/Images/frontendss.png)  
+
 
 ## Description
 RoadCraft is a web-based application for detecting roads in aerial images using two deep learning models: U-Net and DeepLabV3+. Built with FastAPI and a responsive Bootstrap front-end, it allows users to upload images, select a model (U-Net or DeepLabV3+) via a dropdown, and visualize road annotations in real-time. The project leverages the Massachusetts Roads Dataset and integrates advanced segmentation techniques for urban planning, mapping, and emergency response applications.
@@ -69,8 +70,9 @@ RoadCraft is a web-based application for detecting roads in aerial images using 
   - **Epochs**: 15
   - **Metrics**: Dice coefficient, IoU score, Dice loss.
 
-- **U-Net**:
-  ![Loss-plot](static/Images/UNET_loss.jpeg)
+    UNET                      
+:-------------------------:|
+  ![Loss-plot](static/Images/UNET_loss.png)
  
 - **DeepLabV3+**:
   
