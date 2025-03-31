@@ -67,7 +67,7 @@ RoadCraft is a web-based application for detecting roads in aerial images using 
 - **Common for both architectures**:
   - **Dataset Split**: 90% training, 10% validation (via `train_test_split`).
   - **Batching**: Batch size of 4.
-  - **Epochs**: 15
+  - **Epochs**: 15(UNET), 8(DeepLabV3+)
   - **Metrics**: Dice coefficient, IoU score, Dice loss.
 
 ### UNET                      
