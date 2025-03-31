@@ -70,8 +70,7 @@ RoadCraft is a web-based application for detecting roads in aerial images using 
   - **Epochs**: 15
   - **Metrics**: Dice coefficient, IoU score, Dice loss.
 
-    UNET                      
-:-------------------------:|
+### UNET                      
   ![Loss-plot](static/Images/UNET_loss.png)
  
 - **DeepLabV3+**:
